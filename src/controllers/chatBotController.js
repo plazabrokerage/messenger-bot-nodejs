@@ -163,7 +163,7 @@ function handleMessage(sender_psid, message) {
     // id like button: sticker_id 369239263222822
 
     if( message && message.attachments && message.attachments[0].payload){
-        callSendAPI(sender_psid, "Thank you for watching my video !!!");
+        callSendAPI(sender_psid, "Thank you.");
         callSendAPIWithTemplate(sender_psid);
         return;
     }
@@ -179,19 +179,19 @@ function handleMessage(sender_psid, message) {
 
     if(entityChosen === ""){
         //default
-        callSendAPI(sender_psid,`The bot is needed more training, try to say "thanks a lot" or "hi" to the bot` );
+        callSendAPI(sender_psid,`The AI of this bot is limited. Please call us for your queries.` );
     }else{
        if(entityChosen === "greetings"){
            //send greetings message
-           callSendAPI(sender_psid,'Hi there! This bot is created by Hary Pham. Watch more videos on HaryPhamDev Channel!');
+           callSendAPI(sender_psid,'Hi there! This bot is created by JM Plaza. How may I help you?');
        }
        if(entityChosen === "thanks"){
            //send thanks message
-           callSendAPI(sender_psid,`You 're welcome!`);
+           callSendAPI(sender_psid,`You're welcome!`);
        }
         if(entityChosen === "bye"){
             //send bye message
-            callSendAPI(sender_psid,'bye-bye!');
+            callSendAPI(sender_psid,'Bye-bye!');
         }
     }
 }
@@ -210,14 +210,14 @@ let callSendAPIWithTemplate = (sender_psid) => {
                     "template_type": "generic",
                     "elements": [
                         {
-                            "title": "Want to build sth awesome?",
-                            "image_url": "https://www.nexmo.com/wp-content/uploads/2018/10/build-bot-messages-api-768x384.png",
-                            "subtitle": "Watch more videos on my youtube channel ^^",
+                            "title": "Plaza Brokerage",
+                            "image_url": "https://i.imgur.com/tPFCbiA.jpg",
+                            "subtitle": "Visit our website for more info.",
                             "buttons": [
                                 {
                                     "type": "web_url",
-                                    "url": "https://bit.ly/subscribe-haryphamdev",
-                                    "title": "Watch now"
+                                    "url": "https://plazabrokerage.com/",
+                                    "title": "Click here"
                                 }
                             ]
                         }
