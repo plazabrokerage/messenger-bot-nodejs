@@ -199,6 +199,9 @@ function handleMessage(sender_psid, message) {
         if(entityChosen === "contact_number"){
             callSendAPI(sender_psid,'Hi! You may call or text me through 09953500527 or 09613289787. Thank you!');
         }
+        if(entityChosen === "my_number"){
+            callSendAPI(sender_psid,'Hi! You may call or text me through 09953500527 or 09613289787. Thank you!');
+        }
     }
 }
 
