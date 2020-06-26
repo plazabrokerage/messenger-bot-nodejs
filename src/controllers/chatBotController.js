@@ -193,6 +193,10 @@ function handleMessage(sender_psid, message) {
             //send bye message
             callSendAPI(sender_psid,'Bye-bye!');
         }
+        if(entityChosen === "contactnumber"){
+            //send bye message
+            callSendAPI(sender_psid,'You may call or text me through 09953500527 or 09613289787. Thank you!');
+        }
     }
 }
 
