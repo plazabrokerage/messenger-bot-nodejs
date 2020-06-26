@@ -168,7 +168,7 @@ function handleMessage(sender_psid, message) {
         return;
     }
 
-    let entitiesArr = [ "greetings", "thanks", "bye" ];
+    let entitiesArr = [ "greetings", "thanks", "bye", "contactnumber" ];
     let entityChosen = "";
     entitiesArr.forEach((name) => {
         let entity = firstEntity(message.nlp, name);
