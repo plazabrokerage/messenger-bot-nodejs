@@ -179,7 +179,7 @@ function handleMessage(sender_psid, message) {
 
     if(entityChosen === ""){
         //default
-        callSendAPI(sender_psid,`We're unable to answer this through automated messenger. Please call us for your queries or leave your contact number. We'll get back to you as soon as possible.` );
+        callSendAPI(sender_psid,`We're unable to answer this through automated messenger. Please call us at 09953500527/09613289787 for your queries or leave your contact number. We'll get back to you as soon as possible.` );
     }else{
        if(entityChosen === "greetings"){
            //send greetings message
