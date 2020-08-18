@@ -194,10 +194,10 @@ function handleMessage(sender_psid, message) {
             callSendAPI(sender_psid,'Bye-bye!');
         }
         if(entityChosen === "contactnumber"){
-            callSendAPI(sender_psid,'You may call or text me through 09953500527 or 09613289787. Thank you!');
+            callSendAPI(sender_psid,'Thank you for providing your contact number. Our team will assist your as soon as possible. Thank you!');
         }
         if(entityChosen === "contact_number"){
-            callSendAPI(sender_psid,'Hi! You may call or text me through 09953500527 or 09613289787. Thank you!');
+            callSendAPI(sender_psid,'Thank you for providing your contact number. Our team will assist your as soon as possible. Thank you!');
         }
         if(entityChosen === "my_number"){
             callSendAPI(sender_psid,'Hi! You may call or text me through 09953500527 or 09613289787. Thank you!');
@@ -240,6 +240,7 @@ let callSendAPIWithTemplate = (sender_psid) => {
         "uri": "https://graph.facebook.com/v6.0/me/messages",
         "qs": { "access_token": process.env.FB_PAGE_TOKEN },
         "method": "POST",
+          "sender_action":"typing_on",
         "json": body
     }, (err, res, body) => {
         if (!err) {
