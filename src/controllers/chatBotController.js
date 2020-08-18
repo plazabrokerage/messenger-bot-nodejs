@@ -179,11 +179,11 @@ function handleMessage(sender_psid, message) {
 
     if(entityChosen === ""){
         //default
-        callSendAPI(sender_psid,`The AI of this bot is limited. Please call us for your queries.` );
+        callSendAPI(sender_psid,`We're unable to answer this through automated messenger. Please call us for your queries or leave your contact number. We'll get back to you as soon as possible.` );
     }else{
        if(entityChosen === "greetings"){
            //send greetings message
-           callSendAPI(sender_psid,'Hi there! This bot is created by JM Plaza. How may I help you?');
+           callSendAPI(sender_psid,'Hi there! How may I help you?');
        }
        if(entityChosen === "thanks"){
            //send thanks message
