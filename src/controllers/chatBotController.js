@@ -169,7 +169,7 @@ function handleMessage(sender_psid, message) {
         return;
     }
 
-    let entitiesArr = [ "greetings", "thanks", "bye", "contactnumber", "wit/phone_number" ];
+    let entitiesArr = [ "greetings", "thanks", "bye", "contactnumber", "phone_number" ];
     let entityChosen = "";
     entitiesArr.forEach((name) => {
         let entity = firstEntity(message.nlp, name);
@@ -203,7 +203,7 @@ function handleMessage(sender_psid, message) {
         if(entityChosen === "my_number"){
             callSendAPI(sender_psid,'Hi! You may call or text me through 09953500527 or 09613289787. Thank you!');
         }
-        if(entityChosen === "wit/phone_number"){
+        if(entityChosen === "phone_number"){
             callSendAPI(sender_psid,'Thank you for providing your contact number. Our team will assist your as soon as possible.');
         }
     }
