@@ -169,7 +169,7 @@ function handleMessage(sender_psid, message) {
         return;
     }
 
-    let entitiesArr = [ "greetings", "thanks", "bye", "contactnumber" ];
+    let entitiesArr = [ "greetings", "thanks", "bye", "contactnumber", "wit/phone_number" ];
     let entityChosen = "";
     entitiesArr.forEach((name) => {
         let entity = firstEntity(message.nlp, name);
