@@ -169,7 +169,7 @@ function handleMessage(sender_psid, message) {
         return;
     }
 
-    let entitiesArr = [ "greetings", "thanks", "bye", "contactnumber", "phone_number" ];
+    let entitiesArr = [ "greetings", "thanks", "bye", "contactnumber", "phone_number", "available" ];
     let entityChosen = "";
     entitiesArr.forEach((name) => {
         let entity = firstEntity(message.nlp, name);
@@ -204,7 +204,10 @@ function handleMessage(sender_psid, message) {
             callSendAPI(sender_psid,'Hi! You may call or text me through 09953500527 or 09613289787. Thank you!');
         }
         if(entityChosen === "phone_number"){
-            callSendAPI(sender_psid,'Thank you for providing your contact number. Our team will assist your as soon as possible.');
+            callSendAPI(sender_psid,'Thank you for providing your contact number. Our team will assist you as soon as possible.');
+        }
+        if(entityChosen === "available"){
+            callSendAPI(sender_psid,'We will verify if the property is still available. Please leave your contact number so we can get back to you as soon as possible. Thank you.');
         }
     }
 }
