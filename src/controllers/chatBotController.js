@@ -180,11 +180,11 @@ function handleMessage(sender_psid, message) {
 
     if(entityChosen === ""){
         //default
-        callSendAPI(sender_psid,`We're unable to answer this through automated messenger. Please call us at 09953500527/09613289787 for your queries or leave your contact number. We'll get back to you as soon as possible.` );
+        callSendAPI(sender_psid,`We're unable to address your question through this through this AI-enabled messenger. Please leave your contact number so can assist you as soon as possible. You may also call us at call us at 09953500527/09613289787. Thank you!` );
     }else{
        if(entityChosen === "greetings"){
            //send greetings message
-           callSendAPI(sender_psid,'Hi there! How may I help you?');
+           callSendAPI(sender_psid,'Hi there! Welcome to Plaza Brokerage! How may I help you?');
        }
        if(entityChosen === "thanks"){
            //send thanks message
@@ -195,10 +195,10 @@ function handleMessage(sender_psid, message) {
             callSendAPI(sender_psid,'Bye-bye!');
         }
         if(entityChosen === "contactnumber"){
-            callSendAPI(sender_psid,'Thank you for providing your contact number. Our team will assist your as soon as possible. Thank you!');
+            callSendAPI(sender_psid,'Thank you for providing your contact number. Our team will assist your as soon as possible. God bless!');
         }
         if(entityChosen === "contact_number"){
-            callSendAPI(sender_psid,'Thank you for providing your contact number. Our team will assist your as soon as possible. Thank you!');
+            callSendAPI(sender_psid,'Thank you for providing your contact number. Our team will assist your as soon as possible. God bless!');
         }
         if(entityChosen === "my_number"){
             callSendAPI(sender_psid,'Hi! You may call or text me through 09953500527 or 09613289787. Thank you!');
