@@ -180,7 +180,7 @@ function handleMessage(sender_psid, message) {
 
     if(entityChosen === ""){
         //default
-        callSendAPI(sender_psid,`We're unable to address your question through this through this AI-enabled messenger. Please leave your contact number so can assist you as soon as possible. You may also call us at call us at 09953500527/09613289787. Thank you!` );
+        callSendAPI(sender_psid,`We're unable to address your question through this AI-enabled messenger. Please leave your contact number so can assist you as soon as possible. You may also call us at call us at 09953500527/09613289787. Thank you!` );
     }else{
        if(entityChosen === "greetings"){
            //send greetings message
